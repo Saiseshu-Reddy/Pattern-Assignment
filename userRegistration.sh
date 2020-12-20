@@ -78,3 +78,13 @@ then
 else
         echo "Invalid Password, should have only one special character"
 fi
+
+#Email Samples Validation user case
+read -p "Enter the sample email id:" sampleEmail
+sampleEmailmailPattern="^[a-zA-Z0-9]+([._+-][a-zA-Z0-9-]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,3}([.][a-zA-Z]{2})*$"
+if [[ $sampleEmail =~ $sampleEmmailPattern ]]
+then
+        echo "Valid email ID"
+else
+        echo "Invalid email ID"
+fi
