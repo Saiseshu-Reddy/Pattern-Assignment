@@ -67,5 +67,14 @@ if [[ $password =~ $passPattern3 ]]
 then
         echo "Valid Password"
 else
-        echo "Invalid Password"
+        echo "Invalid Password, should have at least 1 number"
+fi
+
+#Password Validation Rule 4 of having only 1 special character
+passPattern4="[!@#$%^&*)(.'/]{1}"
+if [[ $password =~ $passPattern4 ]]
+then
+        echo "Valid Password"
+else
+        echo "Invalid Password, should have only one special character"
 fi
