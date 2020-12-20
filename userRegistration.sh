@@ -51,3 +51,12 @@ then
 else
         echo "Invalid Password"
 fi
+
+#Password validation Rule 2 of having at least 1 Uppser case user case
+passPattern2="[A-Z]{1,}"
+if [[ $password =~ $passPattern2 ]]
+then
+        echo "Valid Password"
+else
+        echo "Invalid Password, should have at least 1 uppser case"
+fi
