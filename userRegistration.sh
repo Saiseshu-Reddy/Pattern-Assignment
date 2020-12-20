@@ -60,3 +60,12 @@ then
 else
         echo "Invalid Password, should have at least 1 uppser case"
 fi
+
+#Password Validation Rule 3 of having at least 1 number user case
+passPattern3="[0-9]{1,}"
+if [[ $password =~ $passPattern3 ]]
+then
+        echo "Valid Password"
+else
+        echo "Invalid Password"
+fi
