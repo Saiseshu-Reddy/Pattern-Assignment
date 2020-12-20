@@ -32,3 +32,12 @@ else
         echo "Invalid email ID"
 fi
 
+#Mobile Number Validation User Case
+read -p "Enter the mobile number along with country code:" mobile
+mobilePattern="^[0-9]{2}[[:space:]][0-9]{10}$"
+if [[ $mobile =~ $mobilePattern ]]
+then
+        echo "Valid Mobile Number"
+else
+        echo "Invalid mobile number"
+fi
