@@ -11,3 +11,13 @@ then
 else
         echo "Invalid first name"
 fi
+
+#Last Name Validation User Case
+read -p "Enter the last name which starts with cap and has a minimum of 3 characters:" lastName
+lastNamePattern="^[A-Z]{1}[a-zA-Z0-9]{2}([a-zA-Z0-9])*$"
+if [[ $lastName =~  $lastNamePattern ]]
+then
+        echo "Valid last name"
+else
+        echo "Invalid last name"
+fi
