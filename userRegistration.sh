@@ -41,3 +41,13 @@ then
 else
         echo "Invalid mobile number"
 fi
+
+#Password Validation Rule 1 of having min 8 characters User Case
+read -p "Enter the password:" password
+passPattern1=".{8,}"
+if [[ $password =~ $passPattern1 ]]
+then
+        echo "Valid Password"
+else
+        echo "Invalid Password"
+fi
